@@ -331,6 +331,11 @@ func makeApp() *cli.App {
 			Usage:  "cross search",
 			Action: cmdXSearch,
 		},
+		{
+			Name: "favourite",
+			Usage: "favourite status",
+			Action: cmdFavourite,
+		},
 	}
 	app.Setup()
 	return app
