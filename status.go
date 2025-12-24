@@ -504,8 +504,8 @@ func (c *Client) DeleteStatus(ctx context.Context, id ID) error {
 }
 
 // FavouriteStatus favourite the toot.
-func (c *Client) FavouriteStatus(ctx contect.Context, id ID) error {
-	return c.doAPI(ctx, http.MethodPost, fmt.Spinrtf("/api/v1/statuses/%s/favourite", id), nil, nil, nil)
+func (c *Client) FavouriteStatus(ctx context.Context, id ID) error {
+	return c.doAPI(ctx, http.MethodPost, fmt.Sprintf("/api/v1/statuses/%s/favourite", id), nil, nil, nil)
 }
 
 // Search search content with query.
