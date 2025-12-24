@@ -26,7 +26,7 @@ func TestCmdFavourite(t *testing.T) {
 		},
 	)
 	if ok {
-		t.Fatal("something wrong to sequence to favourite a status")
+		t.Fatal("expected 'not found' response")
 	}
 
 	ok = false
@@ -36,6 +36,6 @@ func TestCmdFavourite(t *testing.T) {
 		},
 	)
 	if !ok {
-		t.Fatal("something wrong to sequence to favourite a status")
+		t.Fatal("expected an 'OK' response")
 	}
 }
