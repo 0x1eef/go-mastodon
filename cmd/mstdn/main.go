@@ -345,7 +345,7 @@ func makeApp() *cli.App {
 			Name: "Reblog",
 			Usage: "Reblog status",
 			Action: cmdReblog,
-		}
+		},
 	}
 	app.Setup()
 	return app
