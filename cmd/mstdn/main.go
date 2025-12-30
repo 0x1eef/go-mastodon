@@ -342,7 +342,7 @@ func makeApp() *cli.App {
 			Action: cmdUnfavourite,
 		},
 		{
-			Name: "Reblog",
+			Name: "reblog",
 			Usage: "Reblog status",
 			Action: cmdReblog,
 		},
