@@ -346,6 +346,11 @@ func makeApp() *cli.App {
 			Usage: "Reblog status",
 			Action: cmdReblog,
 		},
+		{
+			Name: "resolve",
+			Usage: "Resolves a link to local instance ID",
+			Action: cmdResolve,
+		},
 	}
 	app.Setup()
 	return app
