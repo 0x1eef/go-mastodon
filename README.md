@@ -1,10 +1,21 @@
-# go-mastodon
+## Intro
 
-[![Build Status](https://github.com/mattn/go-mastodon/workflows/test/badge.svg?branch=master)](https://github.com/mattn/go-mastodon/actions?query=workflow%3Atest)
-[![Codecov](https://codecov.io/gh/mattn/go-mastodon/branch/master/graph/badge.svg)](https://codecov.io/gh/mattn/go-mastodon)
-[![Go Reference](https://pkg.go.dev/badge/github.com/mattn/go-mastodon.svg)](https://pkg.go.dev/github.com/mattn/go-mastodon)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mattn/go-mastodon)](https://goreportcard.com/report/github.com/mattn/go-mastodon)
+This project is a fork of [go-mastodon](https://github.com/mattn/go-mastodon)
+from [@mattn](https://github.com/mattn). The fork adds a few improvements to
+the CLI in particular:
 
+* `mstdn reblog` command to reblog a status by ID
+* `mstdn favourite` command to favourite a toot by ID
+* `mstdn unfavourite` command to unfavourite a toot by ID
+* `mstdn resolve` command to resolve an external ID to a local instance ID
+
+The fork enables a pattern where one can easily transform an ID into a URL
+via the `mstdn resolve` command, and this can be useful when performing actions
+on toots. For example:
+
+    user@example$ mstdn reblog $(mstdn resolve https://mastodon.social/@example/1234567)
+    user@example$ mstdn favourite $(mstdn resolve https://mastodon.social/@example/12345434)
+    user@example$ mstdn unfavourite $(mstdn resolve https://mastodon.social/@example/12345943)
 
 ## Usage
 
